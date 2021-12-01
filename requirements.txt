@@ -1,9 +1,11 @@
 email_validator
 Flask
 Flask-Login
+Flask-Mail
 Flask-Migrate
 Flask-SQLAlchemy
 Flask-WTF
+PyJWT
 python-dotenv
 
 black
