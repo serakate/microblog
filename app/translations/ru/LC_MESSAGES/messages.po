@@ -1,0 +1,105 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-01-23 18:52+0300\n"
+"PO-Revision-Date: 2022-01-23 17:58+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: app/__init__.py:22
+msgid "Please log in to access this page."
+msgstr "Пожалуйста, войдите в систему, чтобы получить доступ к этой странице"
+
+#: app/forms.py:12 app/forms.py:18 app/forms.py:49
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: app/forms.py:50
+msgid "About me"
+msgstr "Обо мне"
+
+#: app/forms.py:61
+msgid "Please use a different username."
+msgstr "Пожалуйста, используйте другое имя пользователя."
+
+#: app/forms.py:69
+msgid "Say something"
+msgstr "Скажите что-нибудь"
+
+#: app/routes.py:32
+msgid "Your post is now live!"
+msgstr "Ваш пост теперь в прямом эфире!"
+
+#: app/routes.py:68
+msgid "Invalid username or password"
+msgstr "Неверное имя пользователя или пароль"
+
+#: app/routes.py:92
+msgid "Congratulations, you are now a registered user!"
+msgstr "Поздравляем, теперь вы зарегистрированный пользователь!"
+
+#: app/routes.py:106
+msgid "Check your email for the instructions to reset your password"
+msgstr "Проверьте свою электронную почту для получения инструкций по сбросу пароля"
+
+#: app/routes.py:109
+msgid "Reset Password"
+msgstr "Сброс пароля"
+
+#: app/routes.py:123
+msgid "Your password has been reset."
+msgstr "Ваш пароль был сброшен."
+
+#: app/routes.py:158
+msgid "Your changes have been saved."
+msgstr "Ваши изменения были сохранены."
+
+#: app/routes.py:163
+msgid "Edit Profile"
+msgstr "Редактирование профиля"
+
+#: app/routes.py:174 app/routes.py:194
+#, python-format
+msgid "User %(username)s not found."
+msgstr "Пользователь %(username)s не найден."
+
+#: app/routes.py:177
+msgid "You cannot follow yourself!"
+msgstr "Вы не можете подписаться на себя!"
+
+#: app/routes.py:181 app/routes.py:201
+#, python-format
+msgid "You are following %(username)s!"
+msgstr "Пользователь %(username)s не найден."
+
+#: app/routes.py:197
+msgid "You cannot unfollow yourself!"
+msgstr "Вы не можете отписаться от себя!"
+
+#: app/templates/404.html:2
+msgid "File Not Found"
+msgstr "Файл не найден"
+
+#: app/templates/_post.html:12
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr "%(username)s сказал(а) %(when)s"
+
+#: app/templates/index.html:2
+#, python-format
+msgid "Hi, %(username)s!"
+msgstr "Привет, %(username)s!"
+

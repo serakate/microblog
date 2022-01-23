@@ -32,4 +32,4 @@
     <div class="alert alert-info" role="alert">{{ message }}</div>
     {% endfor %} {% endif %} {% endwith %} {# application content needs to be provided in the app_content block #} {% block app_content %}{% endblock %}
 </div>
-{% endblock %}{% block scripts %} {{ super() }} {{ moment.include_moment() }} {{ moment.lang('ru') }} {% endblock %}
+{% endblock %}{% block scripts %} {{ super() }} {{ moment.include_moment() }} {{ moment.lang(g.locale) }} {% endblock %}
