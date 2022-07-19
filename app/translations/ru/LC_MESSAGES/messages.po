@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-01-23 18:52+0300\n"
+"POT-Creation-Date: 2022-07-19 00:25+0300\n"
 "PO-Revision-Date: 2022-01-23 17:58+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -23,17 +23,26 @@ msgstr ""
 msgid "Please log in to access this page."
 msgstr "Пожалуйста, войдите в систему, чтобы получить доступ к этой странице"
 
+#: app/email.py:21
+msgid "[Microblog] Reset Your Password"
+msgstr "[Микроблог] Сброс пароля"
+
 #: app/forms.py:12 app/forms.py:18 app/forms.py:49
 msgid "Username"
 msgstr "Имя пользователя"
 
+#: app/forms.py:28 app/forms.py:61
+msgid "Please use a different username."
+msgstr "Пожалуйста, используйте другое имя пользователя."
+
+#: app/forms.py:33
+#, fuzzy
+msgid "Please use a different email address."
+msgstr "Пожалуйста, используйте другой почтовый адрес."
+
 #: app/forms.py:50
 msgid "About me"
 msgstr "Обо мне"
-
-#: app/forms.py:61
-msgid "Please use a different username."
-msgstr "Пожалуйста, используйте другое имя пользователя."
 
 #: app/forms.py:69
 msgid "Say something"
@@ -55,7 +64,7 @@ msgstr "Поздравляем, теперь вы зарегистрирован
 msgid "Check your email for the instructions to reset your password"
 msgstr "Проверьте свою электронную почту для получения инструкций по сбросу пароля"
 
-#: app/routes.py:109
+#: app/routes.py:109 app/templates/reset_password_request.html:2
 msgid "Reset Password"
 msgstr "Сброс пароля"
 
@@ -67,7 +76,7 @@ msgstr "Ваш пароль был сброшен."
 msgid "Your changes have been saved."
 msgstr "Ваши изменения были сохранены."
 
-#: app/routes.py:163
+#: app/routes.py:163 app/templates/edit_profile.html:2
 msgid "Edit Profile"
 msgstr "Редактирование профиля"
 
@@ -98,8 +107,69 @@ msgstr "Файл не найден"
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s сказал(а) %(when)s"
 
+#: app/templates/base.html:1 app/templates/base.html:11
+msgid "Microblog"
+msgstr "Микроблог"
+
+#: app/templates/base.html:1
+msgid "Welcome to Microblog"
+msgstr "Добро пожаловать в Микроблог"
+
+#: app/templates/base.html:15
+msgid "Home"
+msgstr "Домашняя страница"
+
+#: app/templates/base.html:16
+msgid "Explore"
+msgstr "Все посты"
+
+#: app/templates/base.html:20
+msgid "Login"
+msgstr "Логин"
+
+#: app/templates/base.html:22
+#, fuzzy
+msgid "Profile"
+msgstr "Редактирование профиля"
+
+#: app/templates/base.html:23
+msgid "Logout"
+msgstr "Разлогиниться"
+
 #: app/templates/index.html:2
 #, python-format
 msgid "Hi, %(username)s!"
 msgstr "Привет, %(username)s!"
+
+#: app/templates/index.html:9
+msgid "Newer posts"
+msgstr "Новые посты"
+
+#: app/templates/index.html:14
+msgid "Older posts"
+msgstr "Старые посты"
+
+#: app/templates/login.html:9
+msgid "New User?"
+msgstr "Ещё не зарегистрированы?"
+
+#: app/templates/login.html:9
+msgid "Click to Register!"
+msgstr "Нажми для регистрации"
+
+#: app/templates/login.html:12
+msgid "Click to Reset It"
+msgstr "Сброс"
+
+#: app/templates/register.html:2
+msgid "Register"
+msgstr "Регистрация"
+
+#: app/templates/reset_password.html:2
+#, fuzzy
+msgid "Reset Your Password"
+msgstr "Сброс пароля"
+
+#~ msgid "Edit your profile"
+#~ msgstr "Редактирование профиля"
 
