@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-07-19 00:25+0300\n"
+"POT-Creation-Date: 2022-07-20 22:34+0300\n"
 "PO-Revision-Date: 2022-01-23 17:58+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -31,6 +31,32 @@ msgstr "[Микроблог] Сброс пароля"
 msgid "Username"
 msgstr "Имя пользователя"
 
+#: app/forms.py:13 app/forms.py:20 app/forms.py:42
+#, fuzzy
+msgid "Password"
+msgstr "Сброс пароля"
+
+#: app/forms.py:14
+msgid "Remember Me"
+msgstr "Запомнить меня"
+
+#: app/forms.py:15
+msgid "Sign In"
+msgstr "Регистрация"
+
+#: app/forms.py:19 app/forms.py:37
+msgid "Email"
+msgstr "Почта"
+
+#: app/forms.py:22 app/forms.py:44
+#, fuzzy
+msgid "Repeat Password"
+msgstr "Сброс пароля"
+
+#: app/forms.py:23 app/templates/register.html:2
+msgid "Register"
+msgstr "Регистрация"
+
 #: app/forms.py:28 app/forms.py:61
 msgid "Please use a different username."
 msgstr "Пожалуйста, используйте другое имя пользователя."
@@ -40,63 +66,84 @@ msgstr "Пожалуйста, используйте другое имя пол�
 msgid "Please use a different email address."
 msgstr "Пожалуйста, используйте другой почтовый адрес."
 
+#: app/forms.py:38 app/forms.py:45
+#, fuzzy
+msgid "Request Password Reset"
+msgstr "Ваш пароль был сброшен."
+
 #: app/forms.py:50
 msgid "About me"
 msgstr "Обо мне"
+
+#: app/forms.py:51
+msgid "Submit"
+msgstr "Подтвердить"
+
+#: app/forms.py:65 app/forms.py:70
+msgid "Submit"
+msgstr "Опубликовать"
 
 #: app/forms.py:69
 msgid "Say something"
 msgstr "Скажите что-нибудь"
 
-#: app/routes.py:32
+#: app/routes.py:38
 msgid "Your post is now live!"
 msgstr "Ваш пост теперь в прямом эфире!"
 
-#: app/routes.py:68
+#: app/routes.py:74
 msgid "Invalid username or password"
 msgstr "Неверное имя пользователя или пароль"
 
-#: app/routes.py:92
+#: app/routes.py:98
 msgid "Congratulations, you are now a registered user!"
 msgstr "Поздравляем, теперь вы зарегистрированный пользователь!"
 
-#: app/routes.py:106
+#: app/routes.py:112
 msgid "Check your email for the instructions to reset your password"
 msgstr "Проверьте свою электронную почту для получения инструкций по сбросу пароля"
 
-#: app/routes.py:109 app/templates/reset_password_request.html:2
+#: app/routes.py:115 app/templates/reset_password_request.html:2
 msgid "Reset Password"
 msgstr "Сброс пароля"
 
-#: app/routes.py:123
+#: app/routes.py:129
 msgid "Your password has been reset."
 msgstr "Ваш пароль был сброшен."
 
-#: app/routes.py:158
+#: app/routes.py:164
 msgid "Your changes have been saved."
 msgstr "Ваши изменения были сохранены."
 
-#: app/routes.py:163 app/templates/edit_profile.html:2
+#: app/routes.py:169 app/templates/edit_profile.html:2
 msgid "Edit Profile"
 msgstr "Редактирование профиля"
 
-#: app/routes.py:174 app/routes.py:194
+#: app/routes.py:180 app/routes.py:200
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Пользователь %(username)s не найден."
 
-#: app/routes.py:177
+#: app/routes.py:183
 msgid "You cannot follow yourself!"
 msgstr "Вы не можете подписаться на себя!"
 
-#: app/routes.py:181 app/routes.py:201
+#: app/routes.py:187 app/routes.py:207
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "Пользователь %(username)s не найден."
 
-#: app/routes.py:197
+#: app/routes.py:203
 msgid "You cannot unfollow yourself!"
 msgstr "Вы не можете отписаться от себя!"
+
+#: app/translate.py:12
+msgid "Error: the translation service is not configured."
+msgstr "Ошибка: сервер-переводчик не сконфигурирован"
+
+#: app/translate.py:27
+msgid "Error: the translation service failed."
+msgstr "Ошибка: сервер-переводчик вернул ошибку"
 
 #: app/templates/404.html:2
 msgid "File Not Found"
@@ -106,6 +153,10 @@ msgstr "Файл не найден"
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s сказал(а) %(when)s"
+
+#: app/templates/_post.html:22
+msgid "Translate"
+msgstr "Перевести"
 
 #: app/templates/base.html:1 app/templates/base.html:11
 msgid "Microblog"
@@ -128,7 +179,6 @@ msgid "Login"
 msgstr "Логин"
 
 #: app/templates/base.html:22
-#, fuzzy
 msgid "Profile"
 msgstr "Редактирование профиля"
 
@@ -136,16 +186,20 @@ msgstr "Редактирование профиля"
 msgid "Logout"
 msgstr "Разлогиниться"
 
+#: app/templates/base.html:45
+msgid "Error: Could not contact server."
+msgstr "Ошибка при подключении к серверу"
+
 #: app/templates/index.html:2
 #, python-format
 msgid "Hi, %(username)s!"
 msgstr "Привет, %(username)s!"
 
-#: app/templates/index.html:9
+#: app/templates/index.html:9 app/templates/user.html:34
 msgid "Newer posts"
 msgstr "Новые посты"
 
-#: app/templates/index.html:14
+#: app/templates/index.html:14 app/templates/user.html:39
 msgid "Older posts"
 msgstr "Старые посты"
 
@@ -157,18 +211,44 @@ msgstr "Ещё не зарегистрированы?"
 msgid "Click to Register!"
 msgstr "Нажми для регистрации"
 
+#: app/templates/login.html:11
+#, fuzzy
+msgid "Forgot Your Password?"
+msgstr "Сброс пароля"
+
 #: app/templates/login.html:12
 msgid "Click to Reset It"
 msgstr "Сброс"
-
-#: app/templates/register.html:2
-msgid "Register"
-msgstr "Регистрация"
 
 #: app/templates/reset_password.html:2
 #, fuzzy
 msgid "Reset Your Password"
 msgstr "Сброс пароля"
+
+#: app/templates/user.html:9
+msgid "Last seen on"
+msgstr "Последний раз онлайн"
+
+#: app/templates/user.html:10
+msgid "followers"
+msgstr "Подписчиков"
+
+#: app/templates/user.html:10
+msgid "following"
+msgstr "подписок"
+
+#: app/templates/user.html:12
+#, fuzzy
+msgid "Edit your profile"
+msgstr "Редактирование профиля"
+
+#: app/templates/user.html:16
+msgid "Follow"
+msgstr "Подписаться"
+
+#: app/templates/user.html:22
+msgid "Unfollow"
+msgstr "Отписаться"
 
 #~ msgid "Edit your profile"
 #~ msgstr "Редактирование профиля"

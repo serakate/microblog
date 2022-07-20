@@ -1,1 +1,3 @@
 FLASK_APP=microblog.py
+FLASK_DEBUG=1
+X_RAPIDAPI_KEY=729b9042abmshb535fc28cbbd3f8p1e4e79jsn79f2b8d01aec
