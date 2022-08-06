@@ -1,18 +1,17 @@
 import json
 
 import requests
+from flask import current_app
 from flask_babel import _
-
-from app import app
 
 url = "https://microsoft-translator-text.p.rapidapi.com/translate"
 
 def translate(text, source_language, dest_language):
-    if 'X_RAPIDAPI_KEY' not in app.config or not app.config['X_RAPIDAPI_KEY']:
+    if 'X_RAPIDAPI_KEY' not in current_app.config or not current_app.config['X_RAPIDAPI_KEY']:
         return _('Error: the translation service is not configured.')
     headers = {
         "content-type": "application/json",
-        "X-RapidAPI-Key": app.config['X_RAPIDAPI_KEY'],
+        "X-RapidAPI-Key": current_app.config['X_RAPIDAPI_KEY'],
         "X-RapidAPI-Host": "microsoft-translator-text.p.rapidapi.com"
         }
     querystring = {
