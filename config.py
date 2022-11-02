@@ -19,3 +19,4 @@ class Config(object):
     POSTS_PER_PAGE = 25
     LANGUAGES = ['en', 'ru']
     X_RAPIDAPI_KEY = os.environ['X_RAPIDAPI_KEY']
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
