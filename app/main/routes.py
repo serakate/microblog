@@ -1,10 +1,5 @@
 from datetime import datetime
 
-from app import db
-from app.main import bp
-from app.main.forms import EditProfileForm, EmptyForm, PostForm, SearchForm
-from app.models import Post, User
-from app.translate import translate
 from flask import (
     current_app,
     flash,
@@ -18,6 +13,12 @@ from flask import (
 from flask_babel import _, get_locale
 from flask_login import current_user, login_required
 from guess_language import guess_language
+
+from app import db
+from app.main import bp
+from app.main.forms import EditProfileForm, EmptyForm, PostForm, SearchForm
+from app.models import Post, User
+from app.translate import translate
 
 
 @bp.before_request
@@ -163,3 +164,9 @@ def search():
         if page > 1 else None
     return render_template('search.html', title=_('Search'), posts=posts,
                            next_url=next_url, prev_url=prev_url)
+
+@bp.route('/user/<username>/popup')
+@login_required
+def user_popup(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    return render_template('user_popup.html', user=user)
